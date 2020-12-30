@@ -20,7 +20,7 @@ RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' 
 # VOLUME：用于指定持久化目录
 VOLUME /tmp
 
-ADD ./target/crossgate-gateway-0.0.1-SNAPSHOT app.jar
+ADD ./crossgate-gateway-0.0.1-SNAPSHOT app.jar
 # RUN bash -c 'touch /app.jar'
 # ENTRYPOINT：配置容器，使其可执行化。配合CMD可省去"application"，只使用参数。
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
